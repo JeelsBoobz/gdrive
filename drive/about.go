@@ -20,7 +20,7 @@ func (self *Drive) About(args AboutArgs) (err error) {
 	user := about.User
 	quota := about.StorageQuota
 
-	fmt.Fprintf(args.Out, "User: %s, %s\n", user.DisplayName, user.EmailAddress)
+	fmt.Fprintf(args.Out, "User: %s <%s>\n", user.DisplayName, user.EmailAddress)
 	fmt.Fprintf(args.Out, "Used: %s\n", formatSize(quota.Usage, args.SizeInBytes))
 	fmt.Fprintf(args.Out, "Free: %s\n", formatSize(quota.Limit-quota.Usage, args.SizeInBytes))
 	fmt.Fprintf(args.Out, "Total: %s\n", formatSize(quota.Limit, args.SizeInBytes))
