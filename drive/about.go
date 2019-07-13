@@ -27,7 +27,7 @@ func (self *Drive) About(args AboutArgs) (err error) {
 	} else {
 		fmt.Fprintf(args.Out, "Free: %s\n", formatSize(quota.Limit-quota.Usage, args.SizeInBytes))
 	}
-	if quota.Limit < 0 {
+	if len(formatSize(quota.Limit, args.SizeInBytes)) < 0 {
 		fmt.Fprintf(args.Out, "Total: %s\n", "Unlimited")
 	} else {
 		fmt.Fprintf(args.Out, "Total: %s\n", formatSize(quota.Limit, args.SizeInBytes))
