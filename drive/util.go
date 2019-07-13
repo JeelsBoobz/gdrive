@@ -22,7 +22,7 @@ func formatList(a []string) string {
 
 func formatSize(bytes int64, forceBytes bool) string {
 	if bytes == 0 {
-		return ""
+		return "0"
 	}
 
 	if forceBytes {
