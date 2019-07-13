@@ -22,7 +22,12 @@ func (self *Drive) About(args AboutArgs) (err error) {
 
 	fmt.Fprintf(args.Out, "User: %s <%s>\n", user.DisplayName, user.EmailAddress)
 	fmt.Fprintf(args.Out, "Used: %s\n", formatSize(quota.Usage, args.SizeInBytes))
-	fmt.Fprintf(args.Out, "Free: %s\n", formatSize(quota.Limit-quota.Usage, args.SizeInBytes))
+	if quota.Limit-quota.usage < 0 {
+		fmt.Fprintf(args.Out, "Free: %s\n", "-")
+	} else {
+		fmt.Fprintf(args.Out, "Free: %s\n", formatSize(quota.Limit-quota.Usage, args.SizeInBytes))
+	}
+	fmt.Fprintf(args.Out, "Total_test: %s\n", quota.Limit)
 	fmt.Fprintf(args.Out, "Total: %s\n", formatSize(quota.Limit, args.SizeInBytes))
 	fmt.Fprintf(args.Out, "Max upload size: %s\n", formatSize(about.MaxUploadSize, args.SizeInBytes))
 	return
