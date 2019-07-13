@@ -21,10 +21,8 @@ func formatList(a []string) string {
 }
 
 func formatSize(bytes int64, forceBytes bool) string {
-	if bytes == '' {
-		return "0"
-	} else {
-		return "Unlimited"
+	if bytes == 0 {
+		return ""
 	}
 
 	if forceBytes {
