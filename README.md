@@ -40,7 +40,6 @@ You will be prompted for a new verification code if the folder does not exist.
 |:-----------------------|:--------|:-------------------|:-----------------------------------------|
 | [gdrive-osx-x64](https://drive.google.com/uc?id=1mM7XfOm3cAxS2ltw1bA3iNIO0cJJCQaN&export=download) |  2.1.2 | OS X 64-bit | b890fe9960c446dc0f407243618248a6ad4ad6a9 |
 | [gdrive-osx-386](https://drive.google.com/uc?id=1lFuOkTGYM7Ztb7LJ9Zcn97wxMWb1kSr3&export=download) |  2.1.2 | OS X 32-bit | ba7fb2dab19782219fc68e7f47c4f43d18120e5e |
-shasum: _release/bin/gdrive-osx-arm:
 | [gdrive-linux-x64](https://drive.google.com/uc?id=1rSamPPaxxSosvI9YMvyziamCgivxAe9M&export=download) |  2.1.2 | Linux 64-bit | a3c48deb0f896754859f2803bd0f4ff7d00b99cc |
 | [gdrive-linux-386](https://drive.google.com/uc?id=1WLr3kggb0zg0eIAVe5kVVfOn3wwtXoLG&export=download) |  2.1.2 | Linux 32-bit | 9eaf7a952f44fb7c6085038a75ca3de9c2c00bad |
 | [gdrive-linux-rpi](https://drive.google.com/uc?id=1kW94Rqshdps1-C_cRuE05HY4AtrMy-A0&export=download) |  2.1.2 | Linux Raspberry Pi | db880745866a7bb81244e9ce10143727a8a8c4d0 |
