@@ -40,7 +40,7 @@ You will be prompted for a new verification code if the folder does not exist.
 |:-----------------------|:--------|:-------------------|:-----------------------------------------|
 | [gdrive-osx-x64](https://drive.google.com/uc?id=11JWOiTac5JtXTnjlegX43xnR1WY9q-jl&export=download) | 2.1.2 | OS X 64-bit | 9afe4b9b6166d4ccb38104fc4f929dfbfa5021f3 |
 | [gdrive-osx-386](https://drive.google.com/uc?id=1PWJAtPWUciaagLgWLwR82V15inHHqFnh&export=download) | 2.1.2 | OS X 32-bit | 495e280dce40e1c6a3982a5531ac122cbd0d1adc |
-| [gdrive-android-arm64](https://drive.google.com/uc?id=1ozHvXwVXuY6gnySZ7UDmQBMgCAE5J0Nd&export=download) | 2.1.2 | Android 64-bit | 7fbcdc5dec9c164f705fe016ff4936c0af2d8558 |
+| [gdrive-android-arm64](https://drive.google.com/uc?id=1ozHvXwVXuY6gnySZ7UDmQBMgCAE5J0Nd&export=download) | 2.1.2 | Android 64-bit | 60ddcf42d6af8880a6453ac9ddc5e70b11edfc03 |
 | [gdrive-linux-x64](https://drive.google.com/uc?id=1O23zEHfmvH7uip0ha48aWjhFETLgiiBv&export=download) | 2.1.2 | Linux 64-bit | 7fbcdc5dec9c164f705fe016ff4936c0af2d8558 |
 | [gdrive-linux-386](https://drive.google.com/uc?id=1bLsilN06za6Irr5HC9PJs9ISz0lOgprC&export=download) | 2.1.2 | Linux 32-bit | ebda5ebc3197abbc17a43af0d5204dd17c3cb601 |
 | [gdrive-linux-rpi](https://drive.google.com/uc?id=1kPQphGqzO8JKpBKYeeWcRM-r7ytX1G-x&export=download) | 2.1.2 | Linux Raspberry Pi | f2ed8d4cd3e74fb58e2c52d0132f6f0a6b5b33b9 |
