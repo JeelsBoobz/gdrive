@@ -1,0 +1,17 @@
+name: Mirror to AFH
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Release
+        run: |
+          bash ./_release/build-all.sh
+      - name: Upload Release
+        run: |
+          bash ./_release/upload.sh
