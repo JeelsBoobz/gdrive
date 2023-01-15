@@ -13,17 +13,17 @@ jobs:
         run: |
           bash ./_release/build-all.sh
 
-      - name: Delete current release assets
-        uses: mknejp/delete-release-assets@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          tag_name: Stable
-          assets: |
-              *.zip
-              *.gz
 
-      - name: Tag Repo
-        uses: richardsimko/update-tag@v1.0.6
+      - name: Delete tag Stable if exists
+        uses: dev-drprasad/delete-tag-and-release@v0.2.0
+        with:
+          delete_release: true
+          tag_name: Stable
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tag Prerelease
+        uses: richardsimko/update-tag@v1
         with:
           tag_name: Stable
         env:
