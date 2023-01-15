@@ -1,4 +1,4 @@
-name: Mirror to AFH
+name: Build Release
 
 on:
   workflow_dispatch:
@@ -12,6 +12,28 @@ jobs:
       - name: Build Release
         run: |
           bash ./_release/build-all.sh
+
+      - name: Delete current release assets
+        uses: mknejp/delete-release-assets@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: Stable
+          assets: |
+              *.zip
+              *.gz
+
+      - name: Tag Repo
+        uses: richardsimko/update-tag@v1.0.6
+        with:
+          tag_name: Stable
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Upload Release
-        run: |
-          bash ./_release/upload.sh
+        uses: softprops/action-gh-release@v1
+        if: ${{  success() }}
+        with:
+          tag_name: Stable
+          files: _release/bin/*
+          prerelease: true
+          generate_release_notes: true
