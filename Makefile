@@ -32,8 +32,8 @@ all:linux-amd64 linux-arm64\
 	darwin-amd64 darwin-arm64\
  	windows-amd64 windows-arm64\
 
-linux-arm64:
-	GOARCH=arm64 GOOS=linux $(GOBUILD) -o $(BINDIR)/$(NAME)-$@
+android-arm64:
+	GOARCH=arm64 GOOS=android $(GOBUILD) -o $(BINDIR)/$(NAME)-$@
 
 darwin-amd64:
 	GOARCH=amd64 GOOS=darwin GOAMD64=v3 $(GOBUILD) -o $(BINDIR)/$(NAME)-$@
