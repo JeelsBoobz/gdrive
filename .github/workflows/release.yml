@@ -13,7 +13,6 @@ jobs:
         run: |
           bash ./_release/build-all.sh
 
-
       - name: Delete tag Stable if exists
         uses: dev-drprasad/delete-tag-and-release@v0.2.0
         with:
@@ -34,6 +33,6 @@ jobs:
         if: ${{  success() }}
         with:
           tag_name: Stable
-          files: _release/bin/*
+          files: ./_release/bin/*
           prerelease: true
           generate_release_notes: true
