@@ -1,6 +1,8 @@
 NAME=gdrive
 BINDIR=bin
 
+GOBUILD=go build -ldflags '-w -s'
+
 PLATFORM_LIST = \
 	android-arm64 \
 	darwin-amd64 \
@@ -31,8 +33,6 @@ WINDOWS_ARCH_LIST = \
 all:linux-amd64 linux-arm64\
 	darwin-amd64 darwin-arm64\
  	windows-amd64 windows-arm64\
-
-GOBUILDCGO = go build -ldflags '-w -s'
 
 android-arm64:
 	GOARCH=arm64 GOOS=android $(GOBUILD) -o $(BINDIR)/$(NAME)-$@
