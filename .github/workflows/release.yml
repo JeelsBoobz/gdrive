@@ -30,9 +30,9 @@ jobs:
 
       - name: Upload Release
         uses: softprops/action-gh-release@v1
-        if: ${{  success() }}
+        if: success()
         with:
           tag_name: Stable
-          files: ./_release/bin/*
-          prerelease: true
+          files: bin/*
+          draft: false
           generate_release_notes: true
