@@ -9,6 +9,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - name: Setup Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: '1.19'
+          check-latest: true
+          cache: true
       - name: Initial setup
         run: |
           go mod init
