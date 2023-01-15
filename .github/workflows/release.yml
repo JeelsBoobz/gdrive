@@ -9,6 +9,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - name: Initial setup
+        run: |
+          go mod init
+
       - name: Build Release
         run: |
           make -j$(($(nproc) + 1)) releases
